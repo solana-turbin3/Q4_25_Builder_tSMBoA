@@ -1,0 +1,9 @@
+*.json
+*.tsbuildinfo
+/dist
+/node_modules
+
+*wallet.json
+node_modules
+target
+.DS_Store
