@@ -48,7 +48,7 @@ impl<'info> Claim<'info> {
     pub fn claim(&mut self) -> Result<()> {
         require!(self.user_account.points > 0, StakeError::NoPointsToClaim);
 
-        // allow 1 to 1 conversion of points to rewards
+        // the conversion rate is 1 point = 1 reward token
         let amount = self.user_account.points as u64;
 
         self.mint_rewards(amount)?;
